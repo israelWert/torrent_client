@@ -1,0 +1,7 @@
+setup.py
+torrent_client/__init__.py
+torrent_client/hi.py
+torrent_client.egg-info/PKG-INFO
+torrent_client.egg-info/SOURCES.txt
+torrent_client.egg-info/dependency_links.txt
+torrent_client.egg-info/top_level.txt
