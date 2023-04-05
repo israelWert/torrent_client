@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 from collections import OrderedDict
 from typing import List
 
-from bencode import bencode
+import bencode
 
 from torrent_client import env
 from torrent_client.torrent_file.file import File
@@ -38,12 +38,14 @@ class Decoder(AbstractDecoder):
         is_multi_file = info.get("files")
 
         return File(
-            announce_list=data["announce-list"] if data["announce-list"] else data["announce"],
+            announce_list=data["announce-list"] if data.get("announce-list") else data["announce"],
             name=info["name"],
             piece_length=info["piece length"],
             pieces=Decoder._decode_pieces(info["pieces"]),
             is_single=not is_multi_file,
-            files=info.get("files") if is_multi_file else [{info["name"]: info["length"]}],
+            files=info.get("files") if is_multi_file else [
+                {"length": info["length"], "path": info["name"]}
+            ],
         )
 
     def decode(self, file_name: str) -> File:
