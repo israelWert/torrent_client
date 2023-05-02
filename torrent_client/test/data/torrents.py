@@ -1,9 +1,10 @@
 import os
 
-from torrent_client import env
+from torrent_client import constants
+
 
 def read(file_name):
-    with open(os.path.join(env.torrent_files_path, file_name) , "rb") as f:
+    with open(os.path.join(constants.torrent_files_path, file_name), "rb") as f:
         return f.read()
 
 

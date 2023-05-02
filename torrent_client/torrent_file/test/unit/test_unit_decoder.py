@@ -12,7 +12,9 @@ class TestUnitDecoder:
         assert file.name == data["info"]["name"]
         assert file.is_single
         assert ["length", "path"] == list(file.files[0].keys())
-        assert bytes is type(file.pieces[0])
+        assert isinstance(file.pieces[0], bytes)
+        assert isinstance(file.info_hash, bytes)
+        assert 1 == len(file.files)
 
     def test_decoder_multi_file(self):
         data = bencode.decode(torrents.multi_file)
@@ -20,5 +22,7 @@ class TestUnitDecoder:
         assert len(file.pieces) == len(data["info"]["pieces"]) / 20
         assert file.name == data["info"]["name"]
         assert not file.is_single
-        assert["length", "path"] == list(file.files[0].keys())
-        assert bytes is type(file.pieces[0])
+        assert ["length", "path"] == list(file.files[0].keys())
+        assert isinstance(file.pieces[0], bytes)
+        assert isinstance(file.info_hash, bytes)
+        assert 1 < len(file.files)
