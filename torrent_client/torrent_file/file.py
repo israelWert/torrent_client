@@ -10,4 +10,6 @@ class File:
     pieces: List[bytes]
     is_single: bool
     files: List[Dict[str, Union[int, List[str]]]]
+    info_hash: bytes
+    total_size: int
 
