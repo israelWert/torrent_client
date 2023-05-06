@@ -4,13 +4,13 @@ from abc import ABC, abstractmethod
 import socket
 
 from torrent_client.tracker.clock import AbstractClock, Clock
-from torrent_client.tracker.udp_net.udp_tracker_messages import UdpTrackerResponse, AbstractUDPMessageManager, \
+from torrent_client.tracker.net.udp_net.udp_tracker_messages import UdpTrackerResponse, AbstractUDPMessageManager, \
     UDPMessageManager
 
 logger = logging.getLogger(__name__)
 
 
-class AbstractUdpTrackerAsyncClient(ABC):
+class AbstractAsyncUdpClient(ABC):
     @abstractmethod
     def send_message(self, data: bytes, address: tuple[str, int]) -> None:
         pass
@@ -24,7 +24,7 @@ class AbstractUdpTrackerAsyncClient(ABC):
         pass
 
 
-class UdpTrackerAsyncClient(AbstractUdpTrackerAsyncClient):
+class AsyncUdpClient(AbstractAsyncUdpClient):
     def __init__(self, clock: AbstractClock = None, message_manager: AbstractUDPMessageManager = None):
         self.message_manager = message_manager if message_manager else UDPMessageManager()
         self.socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)

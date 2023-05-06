@@ -1,16 +1,15 @@
 import logging
 from abc import ABC, abstractmethod
-from enum import Enum
 from typing import Optional
 
 from torrent_client.torrent_file.file import File
 from torrent_client.tracker.clock import Clock, AbstractClock
 from torrent_client.tracker.event import Event
 from torrent_client.tracker.exceptions import TrackerFailedTooManyTimesError
-from torrent_client.tracker.tracker_protocol import TrackerRequest, TrackerResponse
+from torrent_client.tracker.net.tracker_protocol import TrackerRequest, TrackerResponse
 
 DEFAULT_PORT = 6881
-MAX_FAILURES = 8
+MAX_FAILURES = 3
 INTERVAL_IN_FAILURE = 5
 logger = logging.getLogger(__name__)
 
@@ -31,7 +30,7 @@ class AbstractTrackerLogic(ABC):
 
 
 class TrackerLogic(AbstractTrackerLogic):
-    def __init__(self, file: File, peer_id, clock: AbstractClock = None):
+    def __init__(self, file: File, peer_id: str, clock: AbstractClock = None):
         self._file = file
         self._has_started = False
         self._completed = False
@@ -65,7 +64,7 @@ class TrackerLogic(AbstractTrackerLogic):
         return False
 
     def _create_message(self, uploaded: int, downloaded: int):
-        logger.info("creating new _request")
+        logger.info("creating new request")
         return TrackerRequest(
             info_hash=self._file.info_hash,
             peer_id=self._peer_id,

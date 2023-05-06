@@ -53,9 +53,9 @@ class TestUnitTracker:
         tracker, tracker_logic, protocol = tracker_init_data
         response, request = create_response(), create_request()
         tracker.start()
-        assert not tracker.update()
+        assert not tracker.get_peers()
         await tracker_event(tracker_logic, protocol, response, request)
-        assert isinstance(tracker.update(), list)
+        assert isinstance(tracker.get_peers(), list)
         assert isinstance(tracker_logic.response, TrackerResponse)
         assert tracker_logic.response is response
         assert isinstance(protocol.request, TrackerRequest)

@@ -2,13 +2,13 @@ import socket
 import struct
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
-from typing import List, Dict, Any, ClassVar
+from typing import Any
 
 from torrent_client.tracker.event import Event
 from torrent_client.tracker.exceptions import TrackerCommotionError
 from torrent_client.tracker.tracker_request import TrackerRequest
 from torrent_client.tracker.tracker_response import TrackerResponse
-from torrent_client.tracker.udp_net.udp_action import UDPAction
+from torrent_client.tracker.net.udp_net.udp_action import UDPAction
 
 Response = Any
 
@@ -85,7 +85,7 @@ class UDPMessageManager(AbstractUDPMessageManager):
             UDPAction.ANNOUNCE_ACTION.value,
             transaction_id,
             req.info_hash,
-            req.peer_id,
+            req.peer_id.encode(),
             req.downloaded,
             req.left,
             req.uploaded,

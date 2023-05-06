@@ -8,7 +8,7 @@ class Event(Enum):
     @staticmethod
     def to_http(event: "Event"):
         if event.Start:
-            return "start"
+            return "started"
         elif event.Complete:
             return "completed"
 

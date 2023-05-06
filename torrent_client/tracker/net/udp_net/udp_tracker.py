@@ -6,13 +6,13 @@ from typing import Optional
 
 from torrent_client.tracker.exceptions import TrackerCommotionError, TrackerNotSportedError, \
     TrackerNotRespondingError
-from torrent_client.tracker.tracker_protocol import TrackerProtocol
+from torrent_client.tracker.net.tracker_protocol import TrackerProtocol
 from torrent_client.tracker.tracker_request import TrackerRequest
 from torrent_client.tracker.tracker_response import TrackerResponse
-from torrent_client.tracker.udp_net.udp_tracker_async_client import AbstractUdpTrackerAsyncClient
+from torrent_client.tracker.net.udp_net.async_udp_client import AbstractAsyncUdpClient
 from enum import Enum
 
-from torrent_client.tracker.udp_net.udp_tracker_messages import UDPMessageManager, AbstractUDPMessageManager
+from torrent_client.tracker.net.udp_net.udp_tracker_messages import UDPMessageManager, AbstractUDPMessageManager
 
 logger = logging.getLogger(__name__)
 MAX_TRANSACTION_ID = 2 ** 32 - 1
@@ -28,7 +28,7 @@ class Action(Enum):
 
 class UDPTracker(TrackerProtocol):
     def __init__(self, tracker_url: str,
-                 udp_client: AbstractUdpTrackerAsyncClient,
+                 udp_client: AbstractAsyncUdpClient,
                  message_manager: AbstractUDPMessageManager = None):
         self._message_manager = message_manager if message_manager else UDPMessageManager()
         self.ip, str_port = UDPTracker.get_ip_and_port(tracker_url)
@@ -38,16 +38,17 @@ class UDPTracker(TrackerProtocol):
         self._connection_id = None
         self._response = None
         self._task = None
+        logger.info("udp tracker was created")
 
     async def __aenter__(self):
         try:
             addrinfo = socket.getaddrinfo(self.ip, self.port, socket.AF_INET, socket.SOCK_DGRAM)
             self.ip = addrinfo[0][4][0]
-            if self.ip.count(".") > 3:
-                raise TrackerNotSportedError
+            if self.ip.count(":") > 0:
+                raise TrackerNotSportedError()
 
         except socket.gaierror:
-            raise TrackerNotRespondingError
+            raise TrackerNotRespondingError()
 
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         pass
@@ -105,7 +106,8 @@ class UDPTracker(TrackerProtocol):
                 logger.debug(f"response: f{response}")
                 return response
         self._connection_id = None
-        raise TrackerCommotionError
+        logger.warning("no response was returned by tracker")
+        raise TrackerCommotionError()
 
     def _send(self, message: bytes):
         self.client.send_message(message, (self.ip, self.port))
@@ -113,7 +115,10 @@ class UDPTracker(TrackerProtocol):
     @staticmethod
     def get_ip_and_port(url):
         url = url.split("/")[2]
-        return url.split(":")
+        data = url.split(":")
+        if len(data) != 2:
+            raise TrackerNotSportedError()
+        return data
 
     @staticmethod
     def generate_transaction_id():

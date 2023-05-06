@@ -67,7 +67,7 @@ class Decoder(AbstractDecoder):
             ]
 
             file = File(
-                announce_list=data["announce-list"] if data.get("announce-list") else [[data["announce"]]],
+                announce_list=[lst[0] for lst in data["announce-list"]] if data.get("announce-list") else [data["announce"]],
                 name=info["name"],
                 piece_length=info["piece length"],
                 pieces=Decoder._decode_pieces(info["pieces"]),

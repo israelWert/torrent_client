@@ -1,7 +1,9 @@
 from torrent_client.torrent_file.file import File
+from torrent_client.tracker.event import Event
 from torrent_client.tracker.exceptions import TrackerFailedTooManyTimesError
 from torrent_client.tracker.test.fakes.fake_clock import FakeClock
-from torrent_client.tracker.tracker_logic import TrackerLogic, Events, MAX_FAILURES
+from torrent_client.tracker.tracker_logic import TrackerLogic, MAX_FAILURES
+
 from pytest import fixture, raises
 
 from torrent_client.tracker.tracker_request import TrackerRequest
@@ -33,7 +35,7 @@ class TestUnitTrackerLogic:
             b"info_hash",
             2)
         clock = FakeClock()
-        peer_id = b"peer_id"
+        peer_id = b"_peer_id"
         logic = TrackerLogic(file, peer_id, clock)
         uploaded_and_downloaded = (6, 5)
         return file, clock, peer_id, logic, uploaded_and_downloaded
@@ -42,7 +44,7 @@ class TestUnitTrackerLogic:
         file, clock, peer_id, logic, uploaded_and_downloaded = tracker_logic_init_data
         message = logic.update(*uploaded_and_downloaded)
         check_message(message, uploaded_and_downloaded, file, peer_id)
-        assert Events.Start.value == message.event
+        assert Event.Start == message.event
 
     def test_message_after_response(self, tracker_logic_init_data):
         file, clock, peer_id, logic, uploaded_and_downloaded = tracker_logic_init_data
@@ -61,7 +63,7 @@ class TestUnitTrackerLogic:
         logic.update(0, 0, response=TrackerResponse(0, []))
         message = logic.update(*uploaded_and_downloaded, downloading=False)
         check_message(message, uploaded_and_downloaded, file, peer_id)
-        assert Events.Complete.value == message.event
+        assert Event.Complete == message.event
 
     def test_with_error(self, tracker_logic_init_data):
         file, clock, peer_id, logic, uploaded_and_downloaded = tracker_logic_init_data
@@ -71,6 +73,6 @@ class TestUnitTrackerLogic:
             clock.current_time += 2**error_number * 5
             message = logic.update(*uploaded_and_downloaded)
             check_message(message, uploaded_and_downloaded, file, peer_id)
-            assert Events.Start.value == message.event
+            assert Event.Start == message.event
         with raises(TrackerFailedTooManyTimesError):
             logic.update(0, 0, connection_error=True)

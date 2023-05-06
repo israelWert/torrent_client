@@ -18,8 +18,8 @@ LOGGING_CONFIG = {
             'class': 'logging.StreamHandler',
             'stream': 'ext://sys.stdout',
         },
-        "warn_main_file_handler": {
-            "level": logging.WARNING,
+        "error_main_file_handler": {
+            "level": logging.ERROR,
             "formatter": "simple",
             "filename": MAIN_LOG_FILE,
             "class": "logging.FileHandler"
@@ -53,16 +53,20 @@ LOGGING_CONFIG = {
     ,
     'loggers': {
         "torrent_client.client": {
-            "level": logging.DEBUG,
+            "level": logging.INFO,
             "handlers": ["main_file_handler", "console_handler"]
         },
         "torrent_client.torrent_file": {
-            "level": logging.INFO,
-            "handlers": ["torrent_file_handler", "console_warn_handler", "warn_main_file_handler"]
+            "level": logging.WARNING,
+            "handlers": ["torrent_file_handler", "console_warn_handler", "error_main_file_handler"]
         },
         "torrent_client.tracker": {
-            "level": logging.DEBUG,
-            "handlers": ["tracker_handler", "console_warn_handler", "warn_main_file_handler"]
+            "level": logging.INFO,
+            "handlers": ["tracker_handler", "console_warn_handler", "error_main_file_handler"]
+        },
+        "torrent_client.tracker.net": {
+            "level": logging.ERROR,
+            "handlers": ["tracker_handler"]
         }
     },
 

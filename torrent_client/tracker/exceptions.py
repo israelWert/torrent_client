@@ -19,7 +19,16 @@ class TrackerCommotionError(Exception):
     pass
 
 
+class TrackerStoppedNoUnknownReasonError(Exception):
+    """:raise when tracker just stopped with no explanation"""
+    pass
+
+
 class TrackerCommunicationStoppedWarning(Warning):
     """:raise TrackerCommotionError was raised to many times"""
     pass
 
+
+class NoTrackerLeftError(Exception):
+    """:raise when the tracker manager find all tracker were closed"""
+    pass

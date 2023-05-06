@@ -1,13 +1,686 @@
-torrent_client.tracker.tracker_logic - INFO - 68 creating new _request
-torrent_client.tracker.udp_net.udp_tracker - INFO - 72 send new request	
-torrent_client.tracker.udp_net.udp_tracker - DEBUG - 73 TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id=b'TyE\x15\x1a]\xe1f\xc8\x855@\x98\xdd\x17\xb2\xfb\xc5Y\xf1', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
-torrent_client.tracker.tracker_logic - INFO - 68 creating new _request	
-torrent_client.tracker.udp_net.udp_tracker - INFO - 72 send new request	
-torrent_client.tracker.udp_net.udp_tracker - DEBUG - 73 TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id=b'\xd0\x04]\xa5\x03 \xc02b\xe4\xa3j\xbb6\x01\x98`\xa5\x17L', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
-torrent_client.tracker.tracker_logic - INFO - 68 creating new _request	
-torrent_client.tracker.udp_net.udp_tracker - INFO - 72 send new request	
-torrent_client.tracker.udp_net.udp_tracker - DEBUG - 73 TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id=b"\xd5u\x16d\xfb\xf7d\xf1\xaf\x88V7M\xca'\xdd\x19\xa0\xeb\xa0", port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
-torrent_client.tracker.udp_net.udp_tracker - DEBUG - 105 response: fUdpTrackerResponse(action=<UDPAction.CONNECT_ACTION: 0>, transaction_id=1849674340, payload=b'N\xa1\xcfz\xdc\xc7\xb3i')	
-torrent_client.tracker.udp_net.udp_tracker - INFO - 78 connection was established	
-torrent_client.tracker.udp_net.udp_tracker - DEBUG - 105 response: fUdpTrackerResponse(action=<UDPAction.ANNOUNCE_ACTION: 1>, transaction_id=3048614273, payload=b'\x00\x00\x06\xe0\x00\x00\x00\x01\x00\x00\x00?_#\xec\x12\x00\x00\xd5\xc2\x99\xc1t\x01\xd59\xf4\xd1X-\xd4:y\xf9\x1a\xe1\xb2\xd6\x03\x04\xdc\xa5\xb0\xddx{\xf6\xa7\xb0O\xb6\xed\x1a\xe1\xa53f\xb1a4\x97I\xdc1\x1a\xe1\x8d\x8a \xbdJt\x8b/\x10R\xdeRz\xc9\x18\x85/nmA\x8dzv\xdbm3Oa\xa5\xc3m\x15\x04\x16\x1a\xe1k\x0f\x9b>A:ii\xefR\x89\xe0e8\xa2\xb7\x9bZ]\xb9\xc63\xd4\xde]i\xb2\xd7\x1a\xe1]0\xfd\x16\x1a\xe1](\xd0\xf2N\xc3]%h\xc3\xb9\xb2]#\xdeks\xa9]\x00\xc5\xa1\x1a\xe1[R\xbfY\x1a\xe1Zl^\x7f\x1a\xe1Z^8\'b\xf4Y\x9a\xc6\xd8\x1a\xe1Y\x97"\x9a~\xf0Y.\xdf?\x1a\xe1X\xab\xf4\x18\x1a\xe1X\x8a\xb5\x9bq/Xe\xc8\x92\x1a\xe1W\x9f5S\xd2dW\x01O5\x1a\xe1Vz\x18\x8a\x1a\xe1V\x07\x1dK\x1a\xe1U\xa0<\x97\x1a\xe1UZ\x15{\x1a\xe1UJj,\x1a\xe1T\xec\x1f\xa8\xb4\x8dQ\\\xf9\x82\x1a\xe1Q\x19\x1c\x14g\xa3P\x07\xdf\xccqMN<{(3;N:\xe8\x9a\xafxM\x8a{\x86\xc0GMW\x9f\x99\xd0\xbcMW(\xa2\x1a\xe1BQ\xb0\x13\x1a\xe1>\xa9\xbd\xac\xee\xba3\xb3 $(\xd1.\'\x12\xeb9S-\xbb\x85p\xb3D-\x07m\x98\xda\xfb\x1f\xdesE\x1a\xe1\x1f\x1e\xaf\'\x8be\x1f\x0b\x80h\xc0Q\x1b"l\xb5\x1a\xe1\x18\xd4>b\x1a\xe1\x05\xad\x94\x1b\x1a\xe1\x050\x9e\xa0\x1a\xe1\x02P\x1b\xd0\x1a\xe1')	
-torrent_client.tracker.udp_net.udp_tracker - INFO - 80 response was received successfully	
+torrent_client.tracker.tracker_manager - INFO - 47 **************** creating trackers ****************	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 41 udp tracker was created	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 41 udp tracker was created	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 41 udp tracker was created	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 41 udp tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 41 udp tracker was created	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 41 udp tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.net.http_tracker - INFO - 28 http tracker was created	
+torrent_client.tracker.tracker_factory - WARNING - 38 tracker udp://[2001:67c:28f8:92::1111:1]:2710 using ip6	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 41 udp tracker was created	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 41 udp tracker was created	
+torrent_client.tracker.tracker_manager - INFO - 49 **************** all tracker were created ****************	
+torrent_client.tracker.tracker_manager - INFO - 50 **************** start trackers ****************	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker_manager - INFO - 53 **************** all tracker were started ****************	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 73 send new request	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 73 send new request	
+torrent_client.tracker.net.udp_net.udp_tracker - DEBUG - 74 TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.udp_net.udp_tracker - DEBUG - 74 TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://retracker.local/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://retracker.local/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://retracker.local/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://retracker.local/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.filetracker.pl:8089/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.filetracker.pl:8089/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.filetracker.pl:8089/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.filetracker.pl:8089/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker2.wasabii.com.tw:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker2.wasabii.com.tw:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker2.wasabii.com.tw:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker2.wasabii.com.tw:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.grepler.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.grepler.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.grepler.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.grepler.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://125.227.35.196:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://125.227.35.196:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://125.227.35.196:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://125.227.35.196:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.tiny-vps.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.tiny-vps.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.tiny-vps.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.tiny-vps.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://87.248.186.252:8080/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://87.248.186.252:8080/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://87.248.186.252:8080/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://87.248.186.252:8080/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://210.244.71.25:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://210.244.71.25:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://210.244.71.25:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://210.244.71.25:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://46.4.109.148:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://46.4.109.148:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://46.4.109.148:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://46.4.109.148:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 73 send new request	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 73 send new request	
+torrent_client.tracker.net.udp_net.udp_tracker - DEBUG - 74 TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.udp_net.udp_tracker - DEBUG - 74 TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.dler.org:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.dler.org:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.dler.org:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.dler.org:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 73 send new request	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 73 send new request	
+torrent_client.tracker.net.udp_net.udp_tracker - DEBUG - 74 TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.udp_net.udp_tracker - DEBUG - 74 TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.udp_net.udp_tracker - DEBUG - 106 response: fUdpTrackerResponse(action=<UDPAction.CONNECT_ACTION: 0>, transaction_id=3664556182, payload=b'\xc9\xd5!\xa2\xd0\xd9kK')	
+torrent_client.tracker.net.udp_net.udp_tracker - DEBUG - 106 response: fUdpTrackerResponse(action=<UDPAction.CONNECT_ACTION: 0>, transaction_id=3664556182, payload=b'\xc9\xd5!\xa2\xd0\xd9kK')	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 79 connection was established	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 79 connection was established	
+torrent_client.tracker.net.udp_net.udp_tracker - DEBUG - 106 response: fUdpTrackerResponse(action=<UDPAction.ANNOUNCE_ACTION: 1>, transaction_id=445522115, payload=b'\x00\x00\x06z\x00\x00\x00\x02\x00\x00\x00M^\xbeY\xb3\x93\xa4_#\xec\x12\x00\x00\xde\x7f\xbe\x84a\xee\xd9\x0c1\x1a\xee\xfe\xd5\x86\xa5\xa5\x1a\xe1\xd59\xf4\xd1X-\xd4u\t\x99\x1a\xe1\xd4 \xcf\xc2,\x11\xcb{d\x84\xb4\xc8\xc8%i\x9e\x1a\xe1\xc1\xa5a\xe0\x92\xe1\xbc\x1a\xdbH\x1a\xe1\xbc\x06\x08\x95G+\xb9\x94\xd7r\x0e\xd4\xb9u\x95\xaa\x1a\xe1\xb9C\xb1u\x1a\xe1\xb9\x17\x0c\xa2\xa0+\xb9\x03\x91\x92\x1a\xe1\xb8R\x18>\x1a\xe1\xb55\x0c\xfd\x1a\xe1\xb2\xd6\x03\x04\xdc\xa5\x8b/\x10R\xdeR\x86\x13\xe4,\x1a\xe1|z\x8d\xa8\xc5\xe0z\xc9\x18\x85/nq\xa1N\x85\x1a\xe1n\x8aW\x7f\x1a\xe1mA\x8e\x91v\xdbm3Oa\xb0\ne8\xa2\xb7\x9bZ_6\xc9x\x952_4\x12\xab\xc7 _\x17lG\x1a\xe1^\n\x93\x8c\xf8v]\xbe&?\x1a\xe1]i\xb2\xd7\x1a\xe1]%h\xc3\xb9\xb2]#\xdeks\xa9]"P\xf05\xbc\\\xabG\xe3\x1a\xe2[\xdc\xcd\xac\x1a\xe1[\xd6\xf1\x0f\xc8\xd4[\xab\x8e\xf7\x1a\xe1[\xa3?\xc6\x1a\xe1[\xa1\x98\xcc\xa68Zl^\x7f\x1a\xe1Y\xdf\x93H\xee\xd1Y\x98:\x11\x1a\xe1Y\x97"\xec~\xf0X\xb1n\xe8\xdaJX\xaeY\x0cP\xabX\xa0P\xea\xa3lX\x9c\xd1^\x1a\xe1X\x8a\xb5\x9bq/Xg\x84\x18\x1a\xe1Xe\xc8\x92\x1a\xe1Wt\xa0\xf1\x1a\xe1U\xa0\r\x81\x1a\xe1T\xec\x1f\xa8\xb5\x0cS\x14\xc3\x9e\x1a\xe1R\x9b\xe0\xc5\x1a\xe1Q\xc4\xec\x13\x1a\xe1Pt\x18\x1c\x81iO\x81\xee\xf6\x1a\xe1Ot\xb4\xc0\x84\x8eM\xf3\x165F\xb9M\x7f\x07\xac\x1a\xe2>\xf0\x1b\xd3L\x97>\xa9\xbd\xac\xee\xba.\xccL\xcc\x1a\xe1-\xbb\x86i\xae\x8a-}\x06\x91\x1a\xe1)\xc8\xb8\x10\x89\xe0\x1f\x1e\xafM\x8be\x1f\x0b\xdf;\x1a\xe1\x1f\x0b\x80l\xc0Q\x1b"l\x8e\x1a\xe1\x05\x0f7\x8bF\xa5\x02/\xd8e\x8c\x8e')	
+torrent_client.tracker.net.udp_net.udp_tracker - DEBUG - 106 response: fUdpTrackerResponse(action=<UDPAction.ANNOUNCE_ACTION: 1>, transaction_id=445522115, payload=b'\x00\x00\x06z\x00\x00\x00\x02\x00\x00\x00M^\xbeY\xb3\x93\xa4_#\xec\x12\x00\x00\xde\x7f\xbe\x84a\xee\xd9\x0c1\x1a\xee\xfe\xd5\x86\xa5\xa5\x1a\xe1\xd59\xf4\xd1X-\xd4u\t\x99\x1a\xe1\xd4 \xcf\xc2,\x11\xcb{d\x84\xb4\xc8\xc8%i\x9e\x1a\xe1\xc1\xa5a\xe0\x92\xe1\xbc\x1a\xdbH\x1a\xe1\xbc\x06\x08\x95G+\xb9\x94\xd7r\x0e\xd4\xb9u\x95\xaa\x1a\xe1\xb9C\xb1u\x1a\xe1\xb9\x17\x0c\xa2\xa0+\xb9\x03\x91\x92\x1a\xe1\xb8R\x18>\x1a\xe1\xb55\x0c\xfd\x1a\xe1\xb2\xd6\x03\x04\xdc\xa5\x8b/\x10R\xdeR\x86\x13\xe4,\x1a\xe1|z\x8d\xa8\xc5\xe0z\xc9\x18\x85/nq\xa1N\x85\x1a\xe1n\x8aW\x7f\x1a\xe1mA\x8e\x91v\xdbm3Oa\xb0\ne8\xa2\xb7\x9bZ_6\xc9x\x952_4\x12\xab\xc7 _\x17lG\x1a\xe1^\n\x93\x8c\xf8v]\xbe&?\x1a\xe1]i\xb2\xd7\x1a\xe1]%h\xc3\xb9\xb2]#\xdeks\xa9]"P\xf05\xbc\\\xabG\xe3\x1a\xe2[\xdc\xcd\xac\x1a\xe1[\xd6\xf1\x0f\xc8\xd4[\xab\x8e\xf7\x1a\xe1[\xa3?\xc6\x1a\xe1[\xa1\x98\xcc\xa68Zl^\x7f\x1a\xe1Y\xdf\x93H\xee\xd1Y\x98:\x11\x1a\xe1Y\x97"\xec~\xf0X\xb1n\xe8\xdaJX\xaeY\x0cP\xabX\xa0P\xea\xa3lX\x9c\xd1^\x1a\xe1X\x8a\xb5\x9bq/Xg\x84\x18\x1a\xe1Xe\xc8\x92\x1a\xe1Wt\xa0\xf1\x1a\xe1U\xa0\r\x81\x1a\xe1T\xec\x1f\xa8\xb5\x0cS\x14\xc3\x9e\x1a\xe1R\x9b\xe0\xc5\x1a\xe1Q\xc4\xec\x13\x1a\xe1Pt\x18\x1c\x81iO\x81\xee\xf6\x1a\xe1Ot\xb4\xc0\x84\x8eM\xf3\x165F\xb9M\x7f\x07\xac\x1a\xe2>\xf0\x1b\xd3L\x97>\xa9\xbd\xac\xee\xba.\xccL\xcc\x1a\xe1-\xbb\x86i\xae\x8a-}\x06\x91\x1a\xe1)\xc8\xb8\x10\x89\xe0\x1f\x1e\xafM\x8be\x1f\x0b\xdf;\x1a\xe1\x1f\x0b\x80l\xc0Q\x1b"l\x8e\x1a\xe1\x05\x0f7\x8bF\xa5\x02/\xd8e\x8c\x8e')	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 81 response was received successfully	
+torrent_client.tracker.net.udp_net.udp_tracker - INFO - 81 response was received successfully	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - WARNING - 62 tracker was stopped with error 	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker - INFO - 100 response was received	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker - INFO - 68 returning response	
+torrent_client.tracker.tracker - DEBUG - 69 responses: TrackerResponse(interval=1658, peers=[{'ip': '49.26.238.254', 'port': 54662}, {'ip': '165.165.26.225', 'port': 54585}, {'ip': '244.209.88.45', 'port': 54389}, {'ip': '9.153.26.225', 'port': 54304}, {'ip': '207.194.44.17', 'port': 52091}, {'ip': '100.132.180.200', 'port': 51237}, {'ip': '105.158.26.225', 'port': 49573}, {'ip': '97.224.146.225', 'port': 48154}, {'ip': '219.72.26.225', 'port': 48134}, {'ip': '8.149.71.43', 'port': 47508}, {'ip': '215.114.14.212', 'port': 47477}, {'ip': '149.170.26.225', 'port': 47427}, {'ip': '177.117.26.225', 'port': 47383}, {'ip': '12.162.160.43', 'port': 47363}, {'ip': '145.146.26.225', 'port': 47186}, {'ip': '24.62.26.225', 'port': 46389}, {'ip': '12.253.26.225', 'port': 45782}, {'ip': '3.4.220.165', 'port': 35631}, {'ip': '16.82.222.82', 'port': 34323}, {'ip': '228.44.26.225', 'port': 31866}, {'ip': '141.168.197.224', 'port': 31433}, {'ip': '24.133.47.110', 'port': 29089}, {'ip': '78.133.26.225', 'port': 28298}, {'ip': '87.127.26.225', 'port': 27969}, {'ip': '142.145.118.219', 'port': 27955}, {'ip': '79.97.176.10', 'port': 25912}, {'ip': '162.183.155.90', 'port': 24374}, {'ip': '201.120.149.50', 'port': 24372}, {'ip': '18.171.199.32', 'port': 24343}, {'ip': '108.71.26.225', 'port': 24074}, {'ip': '147.140.248.118', 'port': 23998}, {'ip': '38.63.26.225', 'port': 23913}, {'ip': '178.215.26.225', 'port': 23845}, {'ip': '104.195.185.178', 'port': 23843}, {'ip': '222.107.115.169', 'port': 23842}, {'ip': '80.240.53.188', 'port': 23723}, {'ip': '71.227.26.226', 'port': 23516}, {'ip': '205.172.26.225', 'port': 23510}, {'ip': '241.15.200.212', 'port': 23467}, {'ip': '142.247.26.225', 'port': 23459}, {'ip': '63.198.26.225', 'port': 23457}, {'ip': '152.204.166.56', 'port': 23148}, {'ip': '94.127.26.225', 'port': 23007}, {'ip': '147.72.238.209', 'port': 22936}, {'ip': '58.17.26.225', 'port': 22935}, {'ip': '34.236.126.240', 'port': 22705}, {'ip': '110.232.218.74', 'port': 22702}, {'ip': '89.12.80.171', 'port': 22688}, {'ip': '80.234.163.108', 'port': 22684}, {'ip': '209.94.26.225', 'port': 22666}, {'ip': '181.155.113.47', 'port': 22631}, {'ip': '132.24.26.225', 'port': 22629}, {'ip': '200.146.26.225', 'port': 22388}, {'ip': '160.241.26.225', 'port': 21920}, {'ip': '13.129.26.225', 'port': 21740}, {'ip': '31.168.181.12', 'port': 21268}, {'ip': '195.158.26.225', 'port': 21147}, {'ip': '224.197.26.225', 'port': 20932}, {'ip': '236.19.26.225', 'port': 20596}, {'ip': '24.28.129.105', 'port': 20353}, {'ip': '238.246.26.225', 'port': 20340}, {'ip': '180.192.132.142', 'port': 19955}, {'ip': '22.53.70.185', 'port': 19839}, {'ip': '7.172.26.226', 'port': 16112}, {'ip': '27.211.76.151', 'port': 16041}, {'ip': '189.172.238.186', 'port': 11980}, {'ip': '76.204.26.225', 'port': 11707}, {'ip': '134.105.174.138', 'port': 11645}, {'ip': '6.145.26.225', 'port': 10696}, {'ip': '184.16.137.224', 'port': 7966}, {'ip': '175.77.139.101', 'port': 7947}, {'ip': '223.59.26.225', 'port': 7947}, {'ip': '128.108.192.81', 'port': 6946}, {'ip': '108.142.26.225', 'port': 1295}, {'ip': '55.139.70.165', 'port': 559}])	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - WARNING - 62 tracker was stopped with error 	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://retracker.local/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://retracker.local/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://retracker.local/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://retracker.local/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.filetracker.pl:8089/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.filetracker.pl:8089/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.filetracker.pl:8089/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.filetracker.pl:8089/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker2.wasabii.com.tw:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker2.wasabii.com.tw:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker2.wasabii.com.tw:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker2.wasabii.com.tw:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://125.227.35.196:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://125.227.35.196:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://125.227.35.196:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://125.227.35.196:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://46.4.109.148:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://46.4.109.148:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://46.4.109.148:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://46.4.109.148:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://87.248.186.252:8080/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://87.248.186.252:8080/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://87.248.186.252:8080/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://87.248.186.252:8080/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://210.244.71.25:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://210.244.71.25:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://210.244.71.25:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://210.244.71.25:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.tiny-vps.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.tiny-vps.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.tiny-vps.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.tiny-vps.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.grepler.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.grepler.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.grepler.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.grepler.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://retracker.local/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://retracker.local/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://retracker.local/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://retracker.local/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.filetracker.pl:8089/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.filetracker.pl:8089/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.filetracker.pl:8089/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.filetracker.pl:8089/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker2.wasabii.com.tw:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker2.wasabii.com.tw:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker2.wasabii.com.tw:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker2.wasabii.com.tw:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://210.244.71.25:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://210.244.71.25:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://210.244.71.25:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://210.244.71.25:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://46.4.109.148:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://46.4.109.148:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://46.4.109.148:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://46.4.109.148:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.tiny-vps.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.tiny-vps.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.tiny-vps.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.tiny-vps.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://87.248.186.252:8080/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://87.248.186.252:8080/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://87.248.186.252:8080/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://87.248.186.252:8080/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://125.227.35.196:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://125.227.35.196:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://125.227.35.196:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://125.227.35.196:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.grepler.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.grepler.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.grepler.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.grepler.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.filetracker.pl:8089/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.filetracker.pl:8089/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.filetracker.pl:8089/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.filetracker.pl:8089/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker2.wasabii.com.tw:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker2.wasabii.com.tw:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker2.wasabii.com.tw:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker2.wasabii.com.tw:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://retracker.local/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://retracker.local/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://retracker.local/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://retracker.local/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://46.4.109.148:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://46.4.109.148:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://46.4.109.148:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://46.4.109.148:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://210.244.71.25:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://210.244.71.25:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://210.244.71.25:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://210.244.71.25:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - DEBUG - 127 message data: TrackerRequest(info_hash=b':\xdf1\xd0?\xf9\x16\xd9\xbd\xae\x8d\x9f\x12\xba\xf1\xed\xb6\xf2^d', peer_id='-PC0001-955597114580', port=6881, uploaded=0, downloaded=0, left=988064417, event=<Event.Start: 1>)	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://125.227.35.196:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://125.227.35.196:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://125.227.35.196:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://125.227.35.196:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.tiny-vps.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.tiny-vps.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.tiny-vps.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.tiny-vps.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://87.248.186.252:8080/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://87.248.186.252:8080/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://87.248.186.252:8080/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://87.248.186.252:8080/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.grepler.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - INFO - 50 tracker http://tracker.grepler.com:6969/announce sending request	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.grepler.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - DEBUG - 76 request : http://tracker.grepler.com:6969/announce?info_hash=%3A%DF1%D0%3F%F9%16%D9%BD%AE%8D%9F%12%BA%F1%ED%B6%F2%5Ed&peer_id=-PC0001-955597114580&port=6881&uploaded=0&downloaded=0&left=988064417&event=started	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.net.http_tracker - WARNING - 59 tracker connection closed	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.net.udp_net.udp_tracker - WARNING - 109 no response was returned by tracker	
+torrent_client.tracker.net.udp_net.udp_tracker - WARNING - 109 no response was returned by tracker	
+torrent_client.tracker.net.udp_net.udp_tracker - WARNING - 109 no response was returned by tracker	
+torrent_client.tracker.net.udp_net.udp_tracker - WARNING - 109 no response was returned by tracker	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_manager - INFO - 47 **************** creating trackers ****************	
+torrent_client.tracker.tracker_factory - WARNING - 38 tracker udp://[2001:67c:28f8:92::1111:1]:2710 using ip6	
+torrent_client.tracker.tracker_manager - INFO - 49 **************** all tracker were created ****************	
+torrent_client.tracker.tracker_manager - INFO - 50 **************** start trackers ****************	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker - INFO - 60 tracker was started	
+torrent_client.tracker.tracker_manager - INFO - 53 **************** all tracker were started ****************	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - INFO - 77 starting a new communication with tracker	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - INFO - 100 response was received	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker - INFO - 68 returning response	
+torrent_client.tracker.tracker_manager - WARNING - 62 tracker was stopped with error 	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - WARNING - 62 tracker was stopped with error 	
+torrent_client.tracker.tracker_manager - WARNING - 62 tracker was stopped with error 	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_manager - INFO - 57 **************** receiving trackers data ****************	
+torrent_client.tracker.tracker_manager - WARNING - 62 tracker was stopped with error 	
+torrent_client.tracker.tracker_manager - WARNING - 62 tracker was stopped with error 	
+torrent_client.tracker.tracker_manager - INFO - 67 **************** end receiving ****************	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker - WARNING - 103 tracker protocol raised error	
+torrent_client.tracker.tracker_logic - INFO - 67 creating new _request	
+torrent_client.tracker.tracker - INFO - 126 sending new message	

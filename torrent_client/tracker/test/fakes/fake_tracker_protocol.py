@@ -1,6 +1,6 @@
 from typing import Optional
 
-from torrent_client.tracker.tracker_protocol import TrackerProtocol
+from torrent_client.tracker.net.tracker_protocol import TrackerProtocol
 from torrent_client.tracker.tracker_request import TrackerRequest
 from torrent_client.tracker.tracker_response import TrackerResponse
 

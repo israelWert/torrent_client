@@ -1,6 +1,7 @@
 import asyncio
 import logging
 import struct
+from collections import OrderedDict
 from typing import Optional
 from urllib import parse
 
@@ -11,7 +12,7 @@ from bencodepy import BencodeDecodeError
 
 from torrent_client.tracker.event import Event
 from torrent_client.tracker.exceptions import TrackerCommotionError
-from torrent_client.tracker.tracker_protocol import TrackerProtocol
+from torrent_client.tracker.net.tracker_protocol import TrackerProtocol
 from torrent_client.tracker.tracker_request import TrackerRequest
 from torrent_client.tracker.tracker_response import TrackerResponse
 
@@ -24,6 +25,7 @@ class HttpTracker(TrackerProtocol):
     def __init__(self, tracker_url):
         self._tracker_url = tracker_url
         self._task = None
+        logger.info("http tracker was created")
 
     async def __aenter__(self):
         self.session = aiohttp.ClientSession()
@@ -54,8 +56,8 @@ class HttpTracker(TrackerProtocol):
             async with await self.session.get(req) as response:
                 return self._decode_response(await response.read())
         except ClientConnectorError:
-            logger.info("tracker wasn't reacting")
-            return TrackerCommotionError
+            logger.warning("tracker connection closed")
+            return TrackerCommotionError()
         except Exception as e:
             return e
 
@@ -70,14 +72,16 @@ class HttpTracker(TrackerProtocol):
         if req.event:
             params["event"] = Event.to_http(req.event)
         params = parse.urlencode(params)
-        return f"{self._tracker_url}?{params}"
+        res = f"{self._tracker_url}?{params}"
+        logger.debug(f"request : {res}")
+        return res
 
     @staticmethod
-    def _encode_peers(peers_data: bytes):
+    def _encode_peers(peers_data: OrderedDict):
         peers = []
-        for i in range(0, len(peers_data), 6):
-            ip = ".".join([str(peers_data[ip_num]) for ip_num in range(i, i + 4)])
-            port = struct.unpack('>H', peers_data[i + 4:i + 6])[0]
+        for peer in peers_data:
+            ip = peer["ip"]
+            port = peer["port"]
             peers.append({'ip': ip, 'port': port})
         return peers
 
@@ -86,7 +90,7 @@ class HttpTracker(TrackerProtocol):
             decoded = bencode.decode(data)
         except BencodeDecodeError:
             logger.info(f"the tracker {self._tracker_url} send message {data}")
-            raise TrackerCommotionError
+            raise TrackerCommotionError()
         interval = decoded['interval']
         peers = self._encode_peers(decoded["peers"])
         return TrackerResponse(interval, peers)
