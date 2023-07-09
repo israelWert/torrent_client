@@ -2,13 +2,14 @@ import logging
 from abc import ABC, abstractmethod
 from typing import Optional
 
+from torrent_client.constants import PEER_DEFAULT_PORT
 from torrent_client.torrent_file.file import File
 from torrent_client.tracker.clock import Clock, AbstractClock
 from torrent_client.tracker.event import Event
 from torrent_client.tracker.exceptions import TrackerFailedTooManyTimesError
 from torrent_client.tracker.net.tracker_protocol import TrackerRequest, TrackerResponse
 
-DEFAULT_PORT = 6881
+
 MAX_FAILURES = 3
 INTERVAL_IN_FAILURE = 5
 logger = logging.getLogger(__name__)
@@ -68,7 +69,7 @@ class TrackerLogic(AbstractTrackerLogic):
         return TrackerRequest(
             info_hash=self._file.info_hash,
             peer_id=self._peer_id,
-            port=DEFAULT_PORT,
+            port=PEER_DEFAULT_PORT,
             uploaded=uploaded,
             downloaded=downloaded,
             left=self._file.total_size - (uploaded + downloaded),

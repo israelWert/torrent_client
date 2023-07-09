@@ -26,10 +26,10 @@ class TestUnitTrackerLogic:
     @fixture
     def tracker_logic_init_data(self):
         file = File(
-            ["a", "b"],
+            ["_class", "b"],
             "name",
             1,
-            [b"a", b"b"],
+            [b"_class", b"b"],
             True,
             [{}, {}],
             b"info_hash",

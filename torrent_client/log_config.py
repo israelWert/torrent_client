@@ -1,7 +1,7 @@
 import logging
 from logging.config import dictConfig
 
-from torrent_client.constants import MAIN_LOG_FILE, TORRENT_FILE_LOG_FILE, TRACKER_LOG_FILE
+from torrent_client.constants import MAIN_LOG_FILE, TORRENT_FILE_LOG_FILE, TRACKER_LOG_FILE, SINGLE_PEER_LOG_FILE
 
 LOGGING_CONFIG = {
     'version': 1,
@@ -48,6 +48,13 @@ LOGGING_CONFIG = {
             "filename": TRACKER_LOG_FILE,
             "class": "logging.FileHandler"
 
+        },
+        "single_peer_handler": {
+            "level": logging.DEBUG,
+            "formatter": "simple",
+            "filename": SINGLE_PEER_LOG_FILE,
+            "class": "logging.FileHandler"
+
         }
     }
     ,
@@ -61,12 +68,16 @@ LOGGING_CONFIG = {
             "handlers": ["torrent_file_handler", "console_warn_handler", "error_main_file_handler"]
         },
         "torrent_client.tracker": {
-            "level": logging.INFO,
+            "level": logging.ERROR,
             "handlers": ["tracker_handler", "console_warn_handler", "error_main_file_handler"]
         },
         "torrent_client.tracker.net": {
             "level": logging.ERROR,
             "handlers": ["tracker_handler"]
+        },
+        "torrent_client.peer.peer": {
+            "level": logging.DEBUG,
+            "handlers": ["single_peer_handler"]
         }
     },
 

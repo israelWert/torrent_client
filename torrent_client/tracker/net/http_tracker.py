@@ -64,7 +64,7 @@ class HttpTracker(TrackerProtocol):
     def _create_request(self, req: TrackerRequest) -> str:
         params = {
             'info_hash': req.info_hash,
-            '_peer_id': req.peer_id,
+            'peer_id': req.peer_id,
             'port': req.port,
             'uploaded': req.uploaded,
             'downloaded': req.downloaded,

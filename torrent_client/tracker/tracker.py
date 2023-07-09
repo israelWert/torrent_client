@@ -74,7 +74,7 @@ class Tracker(AbstractTracker):
         self._check_communication_errors()
 
     async def _communication(self):
-        logger.info("starting a new communication with tracker")
+        logger.info("starting _class new communication with tracker")
         async with self._protocol:
             await self._communication_loop()
         logger.info("tracker communication is closed")
@@ -94,9 +94,9 @@ class Tracker(AbstractTracker):
     async def _get_response(self) -> Tuple[Optional[TrackerResponse], bool]:
         try:
             response = await self._protocol.get_response()
-            self._response = response
             if not response:
                 return None, False
+            self._response = response
             logger.info("response was received")
             return response, False
         except TrackerCommotionError:

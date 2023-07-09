@@ -24,7 +24,7 @@ class UdpTrackerResponse:
 
 def decode_ip_port(data) -> list[dict[str, str]]:
     peers = []
-    offset = 20
+    offset = 0
     while offset+6 < len(data):
         ip_int, port = struct.unpack("!IH", data[offset:offset + 6])
         ip_address = socket.inet_ntoa(struct.pack("!I", ip_int))
@@ -93,7 +93,7 @@ class UDPMessageManager(AbstractUDPMessageManager):
             0,
             0,
             -1,
-            9999)
+            req.port)
 
     def encode_announce(self, response: UdpTrackerResponse) -> TrackerResponse:
         payload = response.payload
