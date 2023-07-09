@@ -1,9 +1,0 @@
-torrent_client.peer.peer - INFO - 63 we got hand shake	
-torrent_client.peer.peer - INFO - 65 we got bitfield	
-torrent_client.peer.peer - INFO - 49 we have started conversation	
-torrent_client.peer.peer - INFO - 110 <torrent_client.peer.test.fakes.fake_peer_net.FakePeerNet object at 0x000001EA33A34640>	
-torrent_client.peer.peer - INFO - 114 peer can request pieces	
-torrent_client.peer.peer - INFO - 54 False	
-torrent_client.peer.peer - INFO - 137 start downloading from piece	
-torrent_client.peer.peer - DEBUG - 127 start sending requests	
-torrent_client.peer.peer - INFO - 128 None	
