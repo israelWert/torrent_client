@@ -33,3 +33,4 @@ torrent_client.torrent_file.decoder - INFO - 34 file was load into to the code p
 torrent_client.torrent_file.decoder - INFO - 36 code was bencod decoded	
 torrent_client.torrent_file.decoder - INFO - 39 file was encapsulated properly	
 torrent_client.torrent_file.decoder - INFO - 41 file was decoded successfully	
+torrent_client.torrent_file.decoder - ERROR - 50 the file '4.torrent' isn't in the input folder	
