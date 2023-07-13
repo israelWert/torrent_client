@@ -1,6 +1,6 @@
 import os
 
-root_path = os.path.dirname(os.path.abspath(__file__))
+root_path = "C:\\Users\\Israel\\Documents\\code\\python\\torrent_client\\torrent_client"
 torrent_files_path = os.path.join(root_path, "test\\data")
 input_files_path = os.path.join(root_path, "input_files")
 

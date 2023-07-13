@@ -1,4 +1,4 @@
-from torrent_client.peer.clock import AbstractClock
+from torrent_client.peer.p2p_net.clock import AbstractClock
 from torrent_client.peer.exceptions import PeerTimeOutError
 
 

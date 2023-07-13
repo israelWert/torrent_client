@@ -75,7 +75,7 @@ LOGGING_CONFIG = {
             "level": logging.ERROR,
             "handlers": ["tracker_handler"]
         },
-        "torrent_client.peer.peer": {
+        "torrent_client.peer": {
             "level": logging.DEBUG,
             "handlers": ["single_peer_handler"]
         }

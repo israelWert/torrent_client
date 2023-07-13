@@ -4,13 +4,13 @@ from hashlib import sha1
 
 from torrent_client.constants import BLOCK_SIZE
 from torrent_client.peer.exceptions import CorruptedPieceError, NoPieceNeededError
-from torrent_client.peer.messages.messages_data import RequestMessage
-from torrent_client.peer.piece.peer_bridge import PeerBridge
+from torrent_client.peer.p2p_messages_handling.p2p_messages import RequestMessage
+from torrent_client.peer.downloading.peer_bridge import PeerBridge
 
 
-class AbstractPieceRequestState(ABC):
+class AbstractPieceDownloader(ABC):
     @abstractmethod
-    def __enter__(self):
+    def __enter__(self) -> "AbstractPieceDownloader":
         pass
 
     @abstractmethod
@@ -30,7 +30,7 @@ class AbstractPieceRequestState(ABC):
         pass
 
 
-class PieceRequestState(AbstractPieceRequestState):
+class PieceDownloader(AbstractPieceDownloader):
     def __init__(self,
                  downloader: PeerBridge,
                  bit_filed: List[bool],
@@ -47,6 +47,7 @@ class PieceRequestState(AbstractPieceRequestState):
             break
         else:
             raise NoPieceNeededError()
+        return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if isinstance(exc_val, Exception):

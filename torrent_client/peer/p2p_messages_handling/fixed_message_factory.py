@@ -2,7 +2,7 @@ from dataclasses import astuple
 from struct import Struct
 from typing import Type, Any
 
-from torrent_client.peer.messages.message_factory import MessageFactory, PeerMessage_
+from torrent_client.peer.p2p_messages_handling.message_factory import MessageFactory, PeerMessage_
 
 
 class FixedMessageFactory(MessageFactory):

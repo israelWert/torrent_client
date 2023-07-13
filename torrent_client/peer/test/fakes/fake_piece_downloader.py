@@ -1,20 +1,20 @@
-from torrent_client.peer.piece.piece_request_state import AbstractPieceRequestState
+from torrent_client.peer.downloading.piece_request import AbstractPieceDownloader
 
 
-class FakePieceRequestState(AbstractPieceRequestState):
+class FakePieceDownloader(AbstractPieceDownloader):
     def __init__(self):
         self.is_piece_complete_res = False
         self.requests = []
         self.blocks = []
 
     def __enter__(self):
-        pass
+        return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         pass
 
     def __iter__(self):
-        return self.requests
+        return self.requests.__iter__()
 
     def is_piece_complete(self) -> bool:
         return self.is_piece_complete_res

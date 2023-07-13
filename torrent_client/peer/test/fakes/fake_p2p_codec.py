@@ -1,11 +1,11 @@
 from typing import Any
 
-from torrent_client.peer.message_id import MessageID
-from torrent_client.peer.messages.messages_data import Response
-from torrent_client.peer.peer_net.peer_protocol import AbstractPeerProtocol
+from torrent_client.peer.p2p_messages_handling.message_id import MessageID
+from torrent_client.peer.p2p_messages_handling.p2p_messages import Response
+from torrent_client.peer.p2p_messages_handling.p2p_codec import AbstractP2PCodec
 
 
-class FakePeerProtocol(AbstractPeerProtocol):
+class FakeP2PCodec(AbstractP2PCodec):
     def __init__(self):
         self.decode_received = None
         self.decode_response = None
@@ -33,5 +33,5 @@ class FakePeerProtocol(AbstractPeerProtocol):
         return self.length_response
 
     @property
-    def length_byte_size(self) -> int:
+    def length_datatype_size(self) -> int:
         return self._length_bit_size

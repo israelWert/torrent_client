@@ -1,7 +1,7 @@
 from dataclasses import dataclass
-from typing import Final, Annotated, List, Any
+from typing import Annotated, List, Any
 
-from torrent_client.peer.message_id import MessageID
+from torrent_client.peer.p2p_messages_handling.message_id import MessageID
 
 
 @dataclass
