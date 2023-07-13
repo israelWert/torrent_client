@@ -6,7 +6,7 @@
 
 ## project steps
 - [x] support torrent file
-- [x] support tracker tcp communction
+- [x] support tracker udp communction
 - [x] support tracker http communction
 - [x]  support p2p communction
 - [ ] support async file writing
