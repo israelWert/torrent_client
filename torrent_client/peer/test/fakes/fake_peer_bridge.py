@@ -1,7 +1,8 @@
+import asyncio
 from typing import List
 
-from torrent_client.peer.piece.peer_bridge import PeerBridge
-from torrent_client.peer.piece.piece_download_info import PieceDownloadInfo
+from torrent_client.peer.downloading.peer_bridge import PeerBridge
+from torrent_client.peer.downloading.piece_download_info import PieceDownloadInfo
 
 
 class FakePeerBridge(PeerBridge):
@@ -10,9 +11,10 @@ class FakePeerBridge(PeerBridge):
         self.available_piece_to_download = []
         self.locked_index = None
         self.unlocked_index = None
+        self.blocks = []
 
     def store_piece(self, piece: bytes, piece_index: int) -> None:
-        pass
+        self.blocks.append((piece, piece_index))
 
     def get_available_pieces_indexes(self) -> List[int]:
         return self.available_piece_to_download

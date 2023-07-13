@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-from torrent_client.peer.piece.piece_download_info import PieceDownloadInfo
+from torrent_client.peer.downloading.piece_download_info import PieceDownloadInfo
 
 
 class PeerBridge(ABC):

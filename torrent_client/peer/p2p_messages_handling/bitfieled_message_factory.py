@@ -1,8 +1,8 @@
 import struct
 from typing import List
 
-from torrent_client.peer.messages.message_factory import MessageFactory, PeerMessage_
-from torrent_client.peer.messages.messages_data import BitfieldMessage
+from torrent_client.peer.p2p_messages_handling.message_factory import MessageFactory, PeerMessage_
+from torrent_client.peer.p2p_messages_handling.p2p_messages import BitfieldMessage
 
 
 class BitfieldMessageFactory(MessageFactory):

@@ -2,16 +2,16 @@ import struct
 from abc import ABC, abstractmethod
 from typing import Any
 
-from torrent_client.peer.message_id import MessageID
-from torrent_client.peer.messages.bitfieled_message_factory import BitfieldMessageFactory
-from torrent_client.peer.messages.fixed_message_factory import FixedMessageFactory
-from torrent_client.peer.messages.piece_message_factory import PieceMessageFactory
-from torrent_client.peer.messages.message_factory import MessageFactory
-from torrent_client.peer.messages.messages_data import HandshakeMessage, ChokeMessage, UnchokeMessage, \
+from torrent_client.peer.p2p_messages_handling.message_id import MessageID
+from torrent_client.peer.p2p_messages_handling.bitfieled_message_factory import BitfieldMessageFactory
+from torrent_client.peer.p2p_messages_handling.fixed_message_factory import FixedMessageFactory
+from torrent_client.peer.p2p_messages_handling.piece_message_factory import PieceMessageFactory
+from torrent_client.peer.p2p_messages_handling.message_factory import MessageFactory
+from torrent_client.peer.p2p_messages_handling.p2p_messages import HandshakeMessage, ChokeMessage, UnchokeMessage, \
     HaveMessage, RequestMessage, InterestedMessage, NotInterestedMessage, Response
 
 
-class AbstractPeerProtocol(ABC):
+class AbstractP2PCodec(ABC):
     @abstractmethod
     def encode(self, message: Any, message_id: MessageID) -> bytes:
         pass
@@ -35,11 +35,11 @@ class AbstractPeerProtocol(ABC):
 
     @property
     @abstractmethod
-    def length_byte_size(self) -> int:
+    def length_datatype_size(self) -> int:
         pass
 
 
-class PeerProtocol(AbstractPeerProtocol):
+class P2PCodec(AbstractP2PCodec):
     _HEADER_STRUCT = struct.Struct("!IB")
     _LENGTH_STRUCT = struct.Struct("!I")
 
@@ -95,5 +95,5 @@ class PeerProtocol(AbstractPeerProtocol):
         return self._CONSTANT_MESSAGES_FACTORIES[MessageID.Handshake].size
 
     @property
-    def length_byte_size(self):
+    def length_datatype_size(self):
         return self._LENGTH_STRUCT.size

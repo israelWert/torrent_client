@@ -1,7 +1,7 @@
 import struct
 
-from torrent_client.peer.messages.message_factory import MessageFactory
-from torrent_client.peer.messages.messages_data import PieceMessage
+from torrent_client.peer.p2p_messages_handling.message_factory import MessageFactory
+from torrent_client.peer.p2p_messages_handling.p2p_messages import PieceMessage
 
 
 class PieceMessageFactory(MessageFactory[PieceMessage]):

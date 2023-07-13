@@ -1,13 +1,13 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-from torrent_client.peer.piece.peer_bridge import PeerBridge
-from torrent_client.peer.piece.piece_request_state import PieceRequestState, AbstractPieceRequestState
+from torrent_client.peer.downloading.peer_bridge import PeerBridge
+from torrent_client.peer.downloading.piece_request import PieceDownloader, AbstractPieceDownloader
 
 
-class AbstractPieceManager(ABC):
+class AbstractDownloadingManager(ABC):
     @abstractmethod
-    def create_piece_request(self) -> AbstractPieceRequestState:
+    def create_piece_downloader(self) -> AbstractPieceDownloader:
         pass
 
     @abstractmethod
@@ -19,7 +19,7 @@ class AbstractPieceManager(ABC):
         pass
 
     @abstractmethod
-    def is_have_available_piece(self) -> bool:
+    def has_available_piece(self) -> bool:
         pass
 
     @abstractmethod
@@ -27,7 +27,7 @@ class AbstractPieceManager(ABC):
         pass
 
 
-class PieceManager(AbstractPieceManager):
+class DownloadingManager(AbstractDownloadingManager):
     def __init__(
             self,
             bitfiled_size: int,
@@ -37,14 +37,14 @@ class PieceManager(AbstractPieceManager):
         self._bitfiled_size = bitfiled_size
         self._bitfiled = [False for _ in range(bitfiled_size)]
 
-    def is_have_available_piece(self):
+    def has_available_piece(self) -> bool:
         for piece_index in self._downloader.get_available_pieces_indexes():
             if self._bitfiled[piece_index]:
                 return True
         return False
 
-    def create_piece_request(self) -> AbstractPieceRequestState:
-        return PieceRequestState(self._downloader, self._bitfiled)
+    def create_piece_downloader(self) -> AbstractPieceDownloader:
+        return PieceDownloader(self._downloader, self._bitfiled)
 
     def set_bitfiled(self, bitfiled: List[bool]):
         self._bitfiled = bitfiled[:self._bitfiled_size]
