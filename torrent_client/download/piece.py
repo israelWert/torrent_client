@@ -43,7 +43,7 @@ class Piece(AbstractPiece):
         self._parts = parts
 
     def release(self) -> None:
-        if self._occupied:
+        if not self._occupied:
             raise UnoccupiedPieceError()
         self._occupied = False
 
