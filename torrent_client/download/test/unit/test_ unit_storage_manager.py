@@ -1,0 +1,2 @@
+class TestUnitStorageManager:
+    StorageManager

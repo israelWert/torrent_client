@@ -9,7 +9,7 @@ from torrent_client.peer.p2p_net.p2p_socket import P2PSocket
 from torrent_client.peer.test.fakes.fake_clock import FakeClock
 from torrent_client.peer.test.fakes.fake_p2p_codec import FakeP2PCodec
 from torrent_client.peer.test.fakes.fake_tcp_client import FakeTcpClient
-from torrent_client.torrent_file.file import File
+from torrent_client.torrent_file.torrent_file import TorrentFile
 
 SOME_STRING = "data"
 

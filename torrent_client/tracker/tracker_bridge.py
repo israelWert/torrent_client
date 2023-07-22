@@ -6,4 +6,3 @@ class TrackerBridge(ABC):
     @abstractmethod
     def get_downloaded_uploaded(self) -> Tuple[int, int]:
         pass
-
