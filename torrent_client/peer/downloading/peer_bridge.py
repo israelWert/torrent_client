@@ -18,5 +18,5 @@ class PeerBridge(ABC):
         pass
 
     @abstractmethod
-    def unlock_piece(self, index: int):
+    def unlock_piece(self, index: int) -> None:
         pass
