@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 from typing import Optional
 
 from torrent_client.constants import PEER_DEFAULT_PORT
-from torrent_client.torrent_file.file import File
+from torrent_client.torrent_file.torrent_file import TorrentFile
 from torrent_client.tracker.clock import Clock, AbstractClock
 from torrent_client.tracker.event import Event
 from torrent_client.tracker.exceptions import TrackerFailedTooManyTimesError
@@ -31,7 +31,7 @@ class AbstractTrackerLogic(ABC):
 
 
 class TrackerLogic(AbstractTrackerLogic):
-    def __init__(self, file: File, peer_id: str, clock: AbstractClock = None):
+    def __init__(self, file: TorrentFile, peer_id: str, clock: AbstractClock = None):
         self._file = file
         self._has_started = False
         self._completed = False

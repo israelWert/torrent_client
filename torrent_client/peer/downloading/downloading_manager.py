@@ -38,7 +38,7 @@ class DownloadingManager(AbstractDownloadingManager):
         self._bitfiled = [False for _ in range(bitfiled_size)]
 
     def has_available_piece(self) -> bool:
-        for piece_index in self._downloader.get_available_pieces_indexes():
+        for piece_index in self._downloader.get_needed_pieces_indexes():
             if self._bitfiled[piece_index]:
                 return True
         return False
@@ -53,4 +53,4 @@ class DownloadingManager(AbstractDownloadingManager):
         self._bitfiled[index] = True
 
     def is_end_downloading(self) -> bool:
-        return not self._downloader.get_available_pieces_indexes()
+        return not self._downloader.get_needed_pieces_indexes()

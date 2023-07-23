@@ -2,7 +2,7 @@ import logging
 from abc import ABC, abstractmethod
 from typing import List, Optional
 
-from torrent_client.torrent_file.file import File
+from torrent_client.torrent_file.torrent_file import TorrentFile
 from torrent_client.tracker.exceptions import TrackerNotSportedError
 from torrent_client.tracker.net.http_tracker import HttpTracker
 from torrent_client.tracker.net.tracker_protocol import TrackerProtocol
@@ -21,7 +21,7 @@ class AbstractTrackerFactory(ABC):
 
 
 class TrackerFactory(AbstractTrackerFactory):
-    def __init__(self, bridge: TrackerBridge, file: File, peer_id: str,  udp_client: AbstractAsyncUdpClient = None):
+    def __init__(self, bridge: TrackerBridge, file: TorrentFile, peer_id: str, udp_client: AbstractAsyncUdpClient = None):
         self.file = file
         self.bridge = bridge
         self.udp_client = udp_client if udp_client else AsyncUdpClient()

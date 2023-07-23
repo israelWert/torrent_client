@@ -2,7 +2,7 @@ import logging
 from abc import ABC, abstractmethod
 from typing import List, Dict
 
-from torrent_client.torrent_file.file import File
+from torrent_client.torrent_file.torrent_file import TorrentFile
 from torrent_client.tracker.clock import AbstractClock, Clock
 from torrent_client.tracker.exceptions import TrackerStoppedNoUnknownReasonError, TrackerFailedTooManyTimesError, \
     TrackerNotRespondingError, NoTrackerLeftError
@@ -19,7 +19,7 @@ class AbstractTrackerManager(ABC):
     def start_trackers(self,
                        peer_id: str = None,
                        bridge: TrackerBridge = None,
-                       file: File = None,) -> None:
+                       file: TorrentFile = None, ) -> None:
         pass
 
     @abstractmethod
@@ -43,7 +43,7 @@ class TrackerManager(AbstractTrackerManager):
     def start_trackers(self,
                        peer_id: str = None,
                        bridge: TrackerBridge = None,
-                       file: File = None,
+                       file: TorrentFile = None,
                        ) -> None:
         self._factory = self._factory if self._factory else TrackerFactory(
             bridge=bridge,

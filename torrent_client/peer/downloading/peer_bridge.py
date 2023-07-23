@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-from torrent_client.peer.downloading.piece_download_info import PieceDownloadInfo
+from torrent_client.peer.downloading.piece_bitfield_info import PieceBitfieldInfo
 
 
 class PeerBridge(ABC):
@@ -10,14 +10,13 @@ class PeerBridge(ABC):
         pass
 
     @abstractmethod
-    def get_available_pieces_indexes(self) -> List[int]:
+    def get_needed_pieces_indexes(self) -> List[int]:
         pass
 
     @abstractmethod
-    def lock_piece(self, index: int) -> PieceDownloadInfo:
+    def occupy_piece(self, index: int) -> PieceBitfieldInfo:
         pass
 
     @abstractmethod
-    def unlock_piece(self, index: int):
+    def unlock_piece(self, index: int) -> None:
         pass
-

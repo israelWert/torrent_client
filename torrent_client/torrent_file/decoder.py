@@ -9,7 +9,8 @@ import bencode
 
 from torrent_client import constants
 from torrent_client.torrent_file.exception import TorrentFileNotFound, InvalidTorrentFile
-from torrent_client.torrent_file.file import File
+from torrent_client.torrent_file.file_to_download import FileToDownload
+from torrent_client.torrent_file.torrent_file import TorrentFile
 
 
 PIECE_HASH_LENGTH = 20
@@ -20,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 class AbstractDecoder(ABC):
     @abstractmethod
-    def decode(self) -> File:
+    def decode(self) -> TorrentFile:
         pass
 
 
@@ -28,7 +29,7 @@ class Decoder(AbstractDecoder):
     def __init__(self, file_name):
         self.file_name = file_name
 
-    def decode(self) -> File:
+    def decode(self) -> TorrentFile:
         logger.info("start decoding file")
         data = self._read()
         logger.info("file was load into to the code properly")
@@ -57,27 +58,35 @@ class Decoder(AbstractDecoder):
             pieces_lst.append(pieces[index:index+PIECE_HASH_LENGTH])
         return pieces_lst
 
+
     @staticmethod
-    def _encapsulate(data: OrderedDict) -> File:
+    def _decode_files_to_download(info: OrderedDict) -> List[FileToDownload]:
+        files = info.get("files")
+        if files:
+            decoded_files = []
+            for file in files:
+                decoded_files.append(FileToDownload(file["length"], file["path"]))
+            return decoded_files
+        return [FileToDownload(info["length"], [info["name"]])]
+
+    @staticmethod
+    def _encapsulate(data: OrderedDict) -> TorrentFile:
         try:
             info = data["info"]
-            is_multi_file = info.get("files")
-            files = info.get("files") if is_multi_file else [
-                {"length": info["length"], "path": info["name"]}
-            ]
+            files = Decoder._decode_files_to_download(info)
 
-            file = File(
+            file = TorrentFile(
                 announce_list=[lst[0] for lst in data["announce-list"]] if data.get("announce-list") else [data["announce"]],
                 name=info["name"],
                 piece_length=info["piece length"],
                 pieces=Decoder._decode_pieces(info["pieces"]),
-                is_single=not is_multi_file,
+                is_single=len(files) == 1,
                 files=files,
                 info_hash=sha1(bencode.encode(data["info"])).digest(),
-                total_size=sum([file["length"] for file in files])
+                total_size=sum([file.length for file in files])
             )
         except KeyError as e:
             logger.error("torrent file didn't have all it's keys")
-            raise InvalidTorrentFile from e
+            raise InvalidTorrentFile() from e
         return file
 

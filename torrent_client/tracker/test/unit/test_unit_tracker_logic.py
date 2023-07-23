@@ -1,4 +1,4 @@
-from torrent_client.torrent_file.file import File
+from torrent_client.torrent_file.torrent_file import TorrentFile
 from torrent_client.tracker.event import Event
 from torrent_client.tracker.exceptions import TrackerFailedTooManyTimesError
 from torrent_client.tracker.test.fakes.fake_clock import FakeClock
@@ -12,7 +12,7 @@ from torrent_client.tracker.tracker_response import TrackerResponse
 
 def check_message(message: TrackerRequest,
                   uploaded_and_downloaded: tuple,
-                  file: File,
+                  file: TorrentFile,
                   peer_id: bytes):
     assert isinstance(message, TrackerRequest)
     assert uploaded_and_downloaded == (message.uploaded, message.downloaded)
@@ -25,7 +25,7 @@ class TestUnitTrackerLogic:
 
     @fixture
     def tracker_logic_init_data(self):
-        file = File(
+        file = TorrentFile(
             ["_class", "b"],
             "name",
             1,

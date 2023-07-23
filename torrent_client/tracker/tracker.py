@@ -3,7 +3,7 @@ import logging
 from abc import ABC, abstractmethod
 from typing import Optional, List, Tuple
 
-from torrent_client.torrent_file.file import File
+from torrent_client.torrent_file.torrent_file import TorrentFile
 from torrent_client.tracker.clock import AbstractClock, Clock
 from torrent_client.tracker.tracker_bridge import TrackerBridge
 from torrent_client.tracker.exceptions import TrackerCommotionError, TrackerCommunicationStoppedWarning, \
@@ -40,7 +40,7 @@ class Tracker(AbstractTracker):
             download_bridge: TrackerBridge,
             protocol: TrackerProtocol,
             peer_id: str = None,
-            file: File = None,
+            file: TorrentFile = None,
             logic: AbstractTrackerLogic = None,
             clock: AbstractClock = None
     ):
