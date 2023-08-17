@@ -15,13 +15,9 @@ class TrackerProtocol(ABC):
         pass
 
     @abstractmethod
-    async def send_message(self, req: TrackerRequest, with_response: bool = True) -> None:
+    async def send_message(self, req: TrackerRequest, with_response: bool = True) -> Optional[TrackerResponse]:
         pass
 
     @abstractmethod
-    async def get_response(self) -> Optional[TrackerResponse]:
-        pass
-
-    @abstractmethod
-    def get_tracker_url(self):
+    def is_connected(self):
         pass
