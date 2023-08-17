@@ -64,19 +64,19 @@ LOGGING_CONFIG = {
             "handlers": ["main_file_handler", "console_handler"]
         },
         "torrent_client.torrent_file": {
-            "level": logging.WARNING,
+            "level": logging.INFO,
             "handlers": ["torrent_file_handler", "console_warn_handler", "error_main_file_handler"]
         },
         "torrent_client.tracker": {
-            "level": logging.ERROR,
+            "level": logging.INFO,
             "handlers": ["tracker_handler", "console_warn_handler", "error_main_file_handler"]
         },
         "torrent_client.tracker.net": {
-            "level": logging.ERROR,
+            "level": logging.DEBUG,
             "handlers": ["tracker_handler"]
         },
         "torrent_client.peer": {
-            "level": logging.DEBUG,
+            "level": logging.INFO,
             "handlers": ["single_peer_handler"]
         }
     },

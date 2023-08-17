@@ -16,7 +16,7 @@ from torrent_client.tracker.net.udp_net.udp_tracker_messages import UDPMessageMa
 
 logger = logging.getLogger(__name__)
 MAX_TRANSACTION_ID = 2 ** 32 - 1
-
+MAX_ATTEMPTS_TO_CONNECT = 12
 RETRANSMISSION_MAX = 4
 
 
@@ -36,8 +36,7 @@ class UDPTracker(TrackerProtocol):
         self._tracker_url = tracker_url
         self.client = udp_client
         self._connection_id = None
-        self._response = None
-        self._task = None
+        self._attempts_to_connect = 0
         logger.info("udp tracker was created")
 
     async def __aenter__(self):
@@ -46,39 +45,27 @@ class UDPTracker(TrackerProtocol):
             self.ip = addrinfo[0][4][0]
             if self.ip.count(":") > 0:
                 raise TrackerNotSportedError()
-
         except socket.gaierror:
             raise TrackerNotRespondingError()
 
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         pass
 
-    def get_tracker_url(self):
-        return self._tracker_url
+    def is_connected(self):
+        return self._attempts_to_connect < MAX_ATTEMPTS_TO_CONNECT
 
-    async def send_message(self, req: TrackerRequest, with_response: bool = True) -> None:
-        self._task = asyncio.create_task(self._send_request(req, with_response))
-
-    async def get_response(self) -> Optional[TrackerResponse]:
-        try:
-            if isinstance(self._task.exception(), Exception):
-                raise self._task.exception()
-        except asyncio.exceptions.InvalidStateError:
-            pass
-        response = self._response
-        self._response = None
-        return response
-
-    async def _send_request(self, req: TrackerRequest, with_response: bool = True):
+    async def send_message(self, req: TrackerRequest, with_response: bool = True) -> Optional[TrackerResponse]:
         logger.info("send new request")
         logger.debug(req)
         if not self._connection_id and not with_response:
             return
         if not self._connection_id:
+            self._attempts_to_connect += 1
             await self._connect()
             logger.info("connection was established")
-        self._response = await self._announce(req, with_response)
+        response = await self._announce(req, with_response)
         logger.info("response was received successfully")
+        return response
 
     async def _connect(self):
         transaction_id = self.generate_transaction_id()

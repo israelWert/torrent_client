@@ -1,3 +1,4 @@
+import asyncio
 import logging
 
 from torrent_client.torrent_file.decoder import AbstractDecoder, Decoder
@@ -17,12 +18,13 @@ class Client:
         self.file_name = file_name
         self.decoder = decoder if decoder else Decoder(file_name)
         self.tracker_manager = tracker_manager if tracker_manager else TrackerManager()
+        self._peer_que = asyncio.Queue()
 
-    def download(self,):
+    async def download(self):
         logger.info("************* start download *************")
         file = self.decoder.decode()
         logger.info(f"the file {self.file_name} was decoded successfully")
         logger.debug(f"decoded file: {file}")
-        self.tracker_manager.start_trackers(self._peer_id, FakeTrackerBridge(), file)
+        await self.tracker_manager.start_trackers(self._peer_que, self._peer_id, FakeTrackerBridge(), file)
         logger.info("************* end client *************")
         return file

@@ -1,3 +1,4 @@
+import asyncio
 import logging
 from abc import ABC, abstractmethod
 from typing import List, Optional
@@ -19,13 +20,29 @@ class AbstractTrackerFactory(ABC):
     def create_trackers(self) -> List[AbstractTracker]:
         pass
 
+    @abstractmethod
+    async def __aenter__(self):
+        pass
+
+    @abstractmethod
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        pass
+
 
 class TrackerFactory(AbstractTrackerFactory):
-    def __init__(self, bridge: TrackerBridge, file: TorrentFile, peer_id: str, udp_client: AbstractAsyncUdpClient = None):
+    def __init__(self, bridge: TrackerBridge, file: TorrentFile, peer_id: str, peer_que: asyncio.Queue, udp_client: AbstractAsyncUdpClient = None):
         self.file = file
-        self.bridge = bridge
-        self.udp_client = udp_client if udp_client else AsyncUdpClient()
-        self.peer_id = peer_id
+        self._bridge = bridge
+        self._udp_client = udp_client
+        self._peer_id = peer_id
+        self._peer_que = peer_que
+
+    async def __aenter__(self):
+        if not self._udp_client:
+            self._udp_client = AsyncUdpClient()
+
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        self._udp_client.close()
 
     def _find_protocol(self, url) -> Optional[TrackerProtocol]:
         protocol = None
@@ -33,7 +50,7 @@ class TrackerFactory(AbstractTrackerFactory):
             protocol = HttpTracker(url)
         elif "udp" in url:
             try:
-                protocol = UDPTracker(url, self.udp_client)
+                protocol = UDPTracker(url, self._udp_client)
             except TrackerNotSportedError:
                 logger.warning(f"tracker {url} using ip6")
                 return None
@@ -41,17 +58,20 @@ class TrackerFactory(AbstractTrackerFactory):
             logger.warning(f"tracker {url} with unknown protocol")
         return protocol
 
+    def _create_tracker(self, protocol: TrackerProtocol):
+        return Tracker(
+            peer_queue=self._peer_que,
+            download_bridge=self._bridge,
+            protocol=protocol,
+            peer_id=self._peer_id,
+            file=self.file
+        )
+
     def create_trackers(self) -> List[AbstractTracker]:
         trackers = []
         urls = self.file.announce_list
         for url in urls:
             protocol = self._find_protocol(url)
-            if not protocol:
-                continue
-            trackers.append(Tracker(
-                download_bridge=self.bridge,
-                protocol=protocol,
-                peer_id=self.peer_id,
-                file=self.file
-            ))
+            if protocol:
+                trackers.append(self._create_tracker(protocol))
         return trackers
